@@ -15,10 +15,12 @@ int main() {
 
    // Implementação de Movimentação do Bispo
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+   printf("Movimentacao Bispo:\n");
    while (i < BISPO_MOV) {
-      printf("Cima, Direita\n");
+      printf("%d - Cima, Direita\n", i + 1);
       i++;
-   } i = 0;
+   } 
+   i = 0; // Reset do Contador Universal
 
    // Implementação de Movimentação da Torre
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
@@ -27,7 +29,7 @@ int main() {
       printf("%d - Direita\n", i + 1);
       i++;
    } while (i < TORRE_MOV);
-   i = 0;
+   i = 0; // Reset do Contador Universal
 
    // Implementação de Movimentação da Rainha
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
@@ -35,7 +37,7 @@ int main() {
    for (i = 0; i < RAINHA_MOV; i++) {
       printf("%d - Esquerda\n", i + 1);
    }
-   i = 0;
+   i = 0; // Reset do Contador Universal
 
    // Nível Aventureiro - Movimentação do Cavalo
    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
