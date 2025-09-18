@@ -40,15 +40,14 @@ int main() {
    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
    // Um loop pode representar a movimentação horizontal e outro vertical.
    printf("Movimentacao Cavalo:\n");
-   for (i = 0; i < CAVALO_MOV - 2; i++) {
-      int j = 0;
-      
-      while (j < CAVALO_MOV - 1) {
-         printf("%d - Baixo\n", j + 1);
-         j++;
+   for (int i = 0, j = 5; i < j; i++, j--) {
+      if (i == 2) {
+         printf("%d - Direita\n", i + 1);
+         break;
+      } else {
+         printf("%d - Cima\n", i + 1);
+         continue;
       }
-
-      printf("%d - Esquerda\n", j + 1);
    }
 
    // Nível Mestre - Funções Recursivas e Loops Aninhados
