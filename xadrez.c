@@ -24,7 +24,13 @@ int main() {
    // Implementação de Movimentação do Bispo
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
    printf("Movimentacao Bispo:\n");
-   piecesMov(BISPO_MOV, "Cima Direita");
+   for (int i = 0; i < BISPO_MOV; i++) {
+      printf("%d - Cima ", i + 1);
+
+      for (int j = 0; j < 1; j++) {
+         piecesMov(1, "Direita");
+      }
+   }
 
    // Implementação de Movimentação da Torre
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
