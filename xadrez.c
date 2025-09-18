@@ -4,6 +4,13 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+void piecesMov(int numMoves, char dir[]) {
+   if (numMoves > 0) {
+      piecesMov(numMoves - 1, dir);
+      printf("%d - %s\n", numMoves, dir);
+   }
+}
+
 int main() {
    // Nível Novato - Movimentação das Peças
    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -17,28 +24,17 @@ int main() {
    // Implementação de Movimentação do Bispo
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
    printf("Movimentacao Bispo:\n");
-   while (i < BISPO_MOV) {
-      printf("%d - Cima, Direita\n", i + 1);
-      i++;
-   } 
-   i = 0; // Reset do Contador Universal
+   piecesMov(BISPO_MOV, "Cima Direita");
 
    // Implementação de Movimentação da Torre
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
    printf("Movimentacao Torre:\n");
-   do {
-      printf("%d - Direita\n", i + 1);
-      i++;
-   } while (i < TORRE_MOV);
-   i = 0; // Reset do Contador Universal
+   piecesMov(TORRE_MOV, "Direita");
 
    // Implementação de Movimentação da Rainha
    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
    printf("Movimentacao Rainha:\n");
-   for (i = 0; i < RAINHA_MOV; i++) {
-      printf("%d - Esquerda\n", i + 1);
-   }
-   i = 0; // Reset do Contador Universal
+   piecesMov(RAINHA_MOV, "Esquerda");
 
    // Nível Aventureiro - Movimentação do Cavalo
    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
